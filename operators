@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+
+public class Operators { 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        //bEKÉRÉSEK
+
+        System.out.println("Kérem adjon meg egy stringet!");
+        String inputString = scanner.nextLine();
+
+        System.out.print("Kérem, adjon meg az első karaktert: ");
+        char char1 = scanner.next().charAt(0);
+
+        System.out.print("Kérem, adjon meg az második karaktert: ");
+        char char2 = scanner.next().charAt(0);
+
+        System.out.print("Kérem, adjon meg egy int értéket: ");
+        int t = scanner.nextInt();
+
+        System.out.print("Kérem, adjon még egy int értéket: ");
+        int t2 = scanner.nextInt();
+
+        System.out.print("Kérem, adjon még egy double értéket: ");
+        double z1 = scanner.nextDouble();
+
+        System.out.print("Kérem, adjon még egy double értéket: ");
+        double z2 = scanner.nextDouble();
+        
+
+
+        //műveletek
+
+        String eredmenyString = inputString + char1 + char2;
+        System.out.println("Két karakter összeadása: "+ eredmenyString);
+
+        int eredmenyInt = t/ t2;
+        System.out.println("Két szám osztásának eredménye:"+ eredmenyInt);
+
+        double eredmenydouble = z1+z2;
+        System.out.println("Két tizedesszám összeadása:"+eredmenydouble);
+
+        double ereddouble = t-z1;
+        System.out.println("Egy int kivonása egy double-ból:"+ ereddouble);
+
+        double erdeb = t2*z2;
+        System.out.println("Egy int szorozva az eggyik double-lel:" + erdeb);
