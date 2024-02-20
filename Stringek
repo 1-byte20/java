@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+import javax.swing.text.Style;
+
+public class Stringek {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+    
+        System.out.println("Kérem adja meg a vezetéknevét: ");
+        String veznev=sc.next();
+
+        System.out.println("Kérem adja meg a keresztnevét: ");
+        String kervev =sc.next();
+
+        System.out.println("Kérem adja meg a születési helyét: ");
+        String szulh=sc.next();
+
+        System.out.println("Kérem adja meg az életkorát: ");
+        Integer eletk=sc.nextInt();
+        
+        
+        String fullname=veznev +" "+ kervev;
+        System.out.println(fullname.toUpperCase());
+
+        String txt= "A keresztnév indexe: "+fullname;
+        System.out.println(txt.indexOf(kervev));
+
+        System.out.println(fullname.toLowerCase()+" "+szulh.toLowerCase());
+
+        System.out.println(eletk+" "+veznev+" "+kervev+" "+szulh);
+
+        System.out.println(kervev.startsWith("A"));
+
+        System.out.println(veznev.endsWith("t"));
+
+        System.out.println(fullname.length());
+
+        System.out.println(fullname.replace("i", "y"));
+
+
+
