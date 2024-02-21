@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Matek {
+    public static void main(String[] args) {
+
+        int vel=(int)Math.random()*200+1;
+        int vel2=(int)Math.random()*200+1;
+        
+        int max=Math.max(vel,vel2);
+        System.out.println(max);
+        int min = Math.min(vel, vel2);
+        System.out.println(min);
+        double gyok=Math.sqrt(vel);
+        System.out.println(gyok);
+        double gyok2=Math.sqrt(vel2);
+        System.out.println(gyok2);
+        int abs=Math.abs(vel-vel2);
+        System.out.println(abs);
+        double hat=Math.pow(vel,vel2);
+        System.out.println(hat);
+        double ker=Math.round(vel);
+        System.out.println(ker);
+        double ker2=Math.round(vel2);
+        System.out.println(ker2);
+        double kel=Math.ceil(vel);
+        System.out.println(kel);
+        double kel2=Math.ceil(vel2);
+        System.out.println(kel2);
+        double lek=Math.floor(vel);
+        System.out.println(lek);
+        double lek2=Math.floor(vel2);
+        System.out.println(lek2);
+
+
+    }
+    
+}
