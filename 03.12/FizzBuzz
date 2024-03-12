@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int szamok=1;
+        for(int i=1; i<50; i++ ){
+            System.out.println(szamok);
+            szamok++;
+            if (szamok % 3 == 0){
+                System.out.println("Fizz");
+                if (szamok % 5 == 0){
+                    System.out.println("FizzBuzz");
+                }
+            }
+            else if (szamok % 5 == 0){
+                System.out.println("Buzz");
+            }
+            
+        }
+
+    }
+}
