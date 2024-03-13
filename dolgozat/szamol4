@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Szamol4 {
+    public static void main(String[] args) {
+        System.out.println("Kérem adjom meg egy egész számot: ");
+        Scanner sc = new Scanner(System.in);
+        int szam= sc.nextInt();
+
+        System.out.println("Kérem adjom meg még egy egész számot: ");
+        sc = new Scanner(System.in);
+        int szam1= sc.nextInt();
+
+        for (int i=0; i<101; i++){
+            if (i % szam ==0 && i % szam1==0 ){
+                System.out.println("FizzBuzz");
+            }
+            if (i % szam ==0){
+                System.out.println("Fizz");
+                
+            }
+            else if(i % szam1==0){
+                System.out.println("Buzz");
+            }
+            if (i % 3 ==0){
+                (i + 1) =String("");
+            }
+            else{
+                System.out.println(i);
+            }
+        }
+    }
+}
