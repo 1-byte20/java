@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Szamol1 {
+    public static void main(String[] args) {
+
+        
+
+        System.out.println("Kérem adjan meg egy egész számot: ");
+        Scanner sc = new Scanner(System.in);
+        int szam1= sc.nextInt();
+
+        for (int i =1; i<101; i++){
+            if (i % szam1 != 0 ){
+                System.out.println(i);
+
+            }
+            else if (i== 10*szam1){
+                break;
+            }
+            
+        }
+
+    }
+}
