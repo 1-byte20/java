@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Tomb1 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Kérem adja meg az adatok számot: ");
+        int t = sc.nextInt();
+
+        int[] tomb =new int[t];
+
+        
+
+        for (int i =0; i<t; i++){
+            System.out.println("Kérem adjon meg egy számot: ");
+            tomb[i]=sc.nextInt();
+        }
+        for (int i =0; i<t; i++){
+            System.out.println(i+1+". :"+tomb[i]);
+        }
+
+        
+    }
+}
