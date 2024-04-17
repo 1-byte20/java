@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+import javax.print.DocFlavor.STRING;
+
+public class MetodusokDolgozat {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Kérek egy számot: ");
+        int ret=sc.nextInt();
+
+        int ered= signOfTheNumber(ret);
+        System.out.println(ered);
+
+        System.out.println("Kérek egy szöveget: ");
+        String szov= sc.nextLine();
+
+        System.out.println("Kérek egy számot: ");
+        int erm=sc.nextInt();
+
+        String ehh= twoParametets(szov, erm);
+        System.out.println(ehh);
+
+        System.out.println("Kérem a háromszög első odalának hosszát: ");
+        double old1=sc.nextDouble();
+
+        System.out.println("Kérem a háromszög második odalának hosszát: ");
+        double old2=sc.nextDouble();
+
+        System.out.println("Kérem a háromszög harmadik odalának hosszát: ");
+        double old3=sc.nextDouble();
+        
+        double keh=triangleArea(old1, old2, old3);
+
+        if (keh==-1){
+            System.out.println("A három oldal nem alkot hároszöget!");
+        }
+        else {
+            System.out.println("A háromszög területe: "+keh);
+        }
+
+        System.out.println("Kérem az a értékét: ");
+        double a=sc.nextDouble();
+        System.out.println("Kérem a b értékét: ");
+        double b = sc.nextDouble();
+        System.out.println("Kérem a c értékét: ");
+        double c=sc.nextDouble();
+        
+
+
+    }
+
+    public static int signOfTheNumber(int ret){
+        if (ret>0){
+            return 1;
+        }
+        else if (ret<0){
+            return -1;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    public static String twoParametets(String szov, int erm) {
+        return "first parameter: "+szov +", second parameter: "+ erm ;
+    }
+
+    public static double triangleArea(Double old1, Double old2, Double old3) {
+        double s=(old1+old2+old3)/2;
+
+        double T= Math.sqrt(s*(s-old1)*(s-old2)*(s-old3));
+        if (T!=1){
+            return -1;
+        }
+        else {
+            return T;
+        }
+    }
+
+    public static String secondDegreeFunction(double a, double b, double c) {
+        double x1 =(-b + Math.sqrt(getSquare(b) - 4 * a * c))/(2* a);
+        double x2 =(-b - Math.sqrt(getSquare(b) - 4 * a * c))/(2* a);
+
+        if (x1==2.0 && x2==-2.0){
+            return "nem másodfokú fügvény";
+        }
+        else{
+            return "nincs valós megoldás";
+        }
+    }
+
+}
