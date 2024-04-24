@@ -1,0 +1,75 @@
+
+public class MetodusokDolgozat2 {
+    public static void main(String[] args) {
+ 
+        
+    }
+
+    public static String masodfokuMegoldasSzam(double a, double b, double c){
+        double D=Math.sqrt(b)-(4*a*c);
+        if (D==2){
+            return "Két megoldása van";
+        }
+        else if (D==1){
+            return "egy megoldása van";
+        }
+        else if (D==0){
+            return "nincs megoldása";
+        }
+        else if (D==-1){
+            return "nem másodfokú fügvény";
+        }
+    }
+
+    public static boolean vanKisbetu(String text) {
+        for (char letter: text.toCharArray()) {
+            if (Character.isLowerCase(letter)) return true;
+        }
+        return false;
+    }
+
+    public static String getMeret(double mer){
+        if (mer<150){
+            return "XS";
+        }
+        else if (mer>=150||mer<160){
+            return "S";
+        }
+        else if (mer>=160||mer<170){
+            return "M";
+        }
+        else if (mer>=170||mer<180){
+            return "L";
+        }
+        else if (mer>=180||mer<190){
+            return "XL";
+        }
+        else if (mer>=190){
+            return "XXL";
+        }
+    }
+
+    public static String rubikKockaSzin(int szin){
+        if (szin==1){
+            return "yellow";
+        }
+        else if (szin==2){
+            return "red";
+        }
+        else if (szin==3){
+            return "orange";
+        }
+        else if (szin==4){
+            return "white";
+        }
+        else if (szin==5){
+            return "blue";
+        }
+        else if (szin==6){
+            return "green";
+        }
+        else{
+            return "invalid parameter";
+        }
+    }
+}
