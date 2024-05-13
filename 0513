@@ -1,0 +1,70 @@
+import java.util.LinkedList;
+
+public class ShoppingList {
+    //We are going to represent a shopping list by a list containing strings.
+    //
+    //Create a linked list with the following items:
+    // eggs, milk, fish, apples, bread and chicken
+    //Create an application which prints out the answers to the following questions:
+    // - Do we have milk in the shopping list? (yes/no)
+    // - Do we have bananas in the shopping list? (yes/no)
+    //The full output of your main method should be the following:
+    //
+    //yes
+    //no
+    //
+    // The question have to be a method.
+
+    public static void main(String[] args) {
+        LinkedList<String> grosories = new LinkedList<>();
+
+        grosories.add("eggs");
+        grosories.add("milk");
+        grosories.add("fish");
+        grosories.add("apples");
+        grosories.add("bread");
+        grosories.add("chicken");
+
+        System.out.println(" Do we have milk in the shopping list? (yes/no):");
+        boolean tej=false;
+        for (int i=0; i<grosories.size(); i++){
+            if (grosories.contains("milk")) {
+                tej=true;
+            }
+        }
+
+        String vasz =tejker(tej);
+        System.out.println(vasz);
+        
+        System.out.println(" Do we have banana in the shopping list? (yes/no):");
+        boolean banan=false;
+        for (int i=0; i<grosories.size(); i++){
+            if (grosories.contains("banana")) {
+                tej=true;
+            }
+        }
+
+        String vasz2= banker(banan);
+        System.out.println(vasz2);
+
+    }
+    public static String tejker(boolean tej) {
+        if (tej==true) {
+            return "yes";            
+        }
+        else{
+            return "no";
+        }
+        
+    }
+    public static String banker(boolean banan) {
+        if (banan==true) {
+            return "yes";            
+        }
+        else{
+            return "no";
+        }
+        
+    }
+
+}
