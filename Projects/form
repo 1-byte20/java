@@ -1,0 +1,55 @@
+import flet as ft
+
+
+def main(page: ft.Page):
+    page.title='Személyes adatok'
+    page.scroll=ft.ScrollMode.ALWAYS
+    
+
+    r=ft.TextField(label='Firstname:' ,bgcolor='lightgreen', width=700)
+    s=ft.TextField(label='Surname:' ,bgcolor='lightgreen', width=700)
+    e=ft.TextField(label='Bank account number:' ,bgcolor='lightgreen', width=700) 
+    q=ft.TextField(label='Country:' ,bgcolor='lightgreen', width=600)
+    w=ft.TextField(label='State:' ,bgcolor='lightgreen', width=600)
+    z=ft.TextField(label='City:' ,bgcolor='lightgreen', width=600)
+    y=ft.TextField(label='Street:' ,bgcolor='lightgreen', width=600)
+
+    wq = ft.RadioGroup(content=ft.Column([
+        
+    ]))
+    
+    c1 = ft.Checkbox(label="Sleep")
+    c2 = ft.Checkbox(label="Kick a child")
+    c3 = ft.Checkbox(label="Eat")
+    c4 = ft.Checkbox(label="Travel")
+    
+    dd = ft.Dropdown(
+        width=150,
+        options=[
+            ft.dropdown.Option("Male"),
+            ft.dropdown.Option("Female"),
+            ft.dropdown.Option("Non-binary"),
+            ft.dropdown.Option("Croassont"),
+            ft.dropdown.Option("Walmart bag"),
+        ],
+    )
+
+    bot= ft.Botton(value="submit")
+    
+    
+    cg = ft.RadioGroup(content=ft.Column([
+    ft.Radio(value="red", label="Red"),
+    ft.Radio(value="green", label="Green"),
+    ft.Radio(value="blue", label="Blue")]))
+  
+    page.add(r, s, e, w, q, z, y,
+             ft.Text("How old are you?"),
+             ft.Slider(min=0, max=100, divisions=100, label="{value}"),
+             ft.Text("Select your gender!"), dd,
+               ft.Text("Select your favorite color:"),
+                 cg, ft.Text("How do you like to spend your freetime?"),
+                   c1, c2, c3, c4,  bot)
+
+
+if __name__ == '__main__':
+    ft.app(target=main)
