@@ -1,0 +1,47 @@
+package zoo;
+
+public class Bird extends Animal{
+
+    String breed;
+    String sound = "";
+    boolean isLandAnimal = false;
+    String Reproduction = "egg";
+
+    puclic Bird(String name, String breed, int age){
+        this.name = name;
+        this.breed = breed;
+        this.age = age;
+    }
+
+    @Override
+    String breed(){
+        return null;
+    }
+
+    @Override
+    void sound(){
+        System.out.println(this.sound + " " + this.sound);
+    }
+
+    @Override
+    boolean isLandAnimal(){
+        return true;
+    }
+
+    public void setSound(String sound){
+        this.sound = sound;
+    }
+
+    public void setIsLandAnimal(boolean isLandAnimal){
+        this.isLandAnimal() = isLandAnimal;
+    }
+
+    @Override
+    public String toString() {
+        return this.name + " Breed: " + this.breed() + " sound: " + this.sound;
+
+    }
+
+
+
+}
