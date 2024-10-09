@@ -1,0 +1,15 @@
+package flyable;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Helikopter h = new Helikopter("Apache AC-126", 450, false);
+        Helikopter th = new Helikopter("Monster A1", 450, false);
+
+        System.out.println(h);
+        h.setLand(true);
+        System.out.println(h.fly());
+
+        Bird g = new Bird("kele", "ehh", 23);
+    }
+}
