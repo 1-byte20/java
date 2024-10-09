@@ -1,0 +1,50 @@
+package flyable;
+
+public class Helikopter extends Vehicle implements Flyable{
+    boolean isLand;
+
+
+    public Helikopter(String type, int speed, boolean isTruck){
+        this.type = type;
+        this.speed = speed;
+        this.isTruck = isTruck;
+    }
+
+    public void setLand(boolean land){
+        this.land() = isLand;
+    }
+
+    @Override
+    public boolean land() {
+        return isLand;
+    }
+
+    @Override
+    public String fly() {
+        if (island){
+            return "Helicopter is out of use.";
+        }else{
+            return "Helicopter flyes";
+        }
+
+    }
+
+
+
+    @Override
+    public void takeOff() {
+        System.out.println("Helicopter is takeing off.");
+        this.isLand = false;
+    }
+
+    @Override
+    public String toString() {
+        return "Helikopter{" +
+                "type=" + type +
+                ", isLand=" + isLand +
+                ", speed=" + speed +
+                ", isTruck=" +isTruck +
+                '}';
+    }
+
+}
