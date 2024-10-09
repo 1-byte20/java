@@ -1,0 +1,7 @@
+package flyable;
+
+public abstract class vehicle {
+    int speed;
+    boolean isTruck;
+    string type;
+}
